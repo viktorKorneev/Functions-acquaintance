@@ -21,3 +21,6 @@ makeTea(3, "Early Grey")
 
 // недостающие аргументы функции
 makeTea(3)       // undefined
+
+// "лишние" аргументы функции
+makeTea(3, "Early Grey", "hey ma!", 42);
