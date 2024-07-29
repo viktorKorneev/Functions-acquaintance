@@ -35,21 +35,20 @@
 // barkAtTheMoon();
 
 // deposit
-const depositAmount = 1000
-const yearlyRate = 15
-const depositTermInYears = 2
-
-let depositIncome = 0
-let count = 0
-
-while (count < depositTermInYears) {
-    depositIncome = depositIncome + depositAmount * (yearlyRate / 100)
-    count  = count + 1
-}
+const depositAmount = 1000;
+const yearlyRate = 15;
+const depositTermInYears = 2;
 
 function getDepositIncome(amount, rate, term) {
+  let depositIncome = 0;
+  let count = 0;
 
+  while (count < term) {
+    depositIncome = depositIncome + amount * (rate / 100);
+    count = count + 1;
+  }
+  return depositIncome
 }
 // total
 
-console.log(depositIncome);
+getDepositIncome(depositAmount, yearlyRate, depositTermInYears)
