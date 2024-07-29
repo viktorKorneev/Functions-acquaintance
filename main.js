@@ -16,6 +16,8 @@ function makeTea(cups, tea) {
     console.log("Brewing " + cups + " cups of " + tea);
 }
 
-
 // правильный вызов функции
 makeTea(3, "Early Grey")
+
+// недостающие аргументы функции
+makeTea(3)       // undefined
