@@ -24,3 +24,6 @@ makeTea(3)       // undefined
 
 // "лишние" аргументы функции
 makeTea(3, "Early Grey", "hey ma!", 42);
+
+// агрументы переданы в неверном порядке
+makeTea("Early Grey", 3)
