@@ -47,11 +47,9 @@ function getDepositIncome(amount, rate, term) {
     depositIncome = depositIncome + amount * (rate / 100);
     count = count + 1;
   }
-  return depositIncome
+  return depositIncome;
 }
 // total
 
-const depositIncome_1 = getDepositIncome(depositAmount, yearlyRate, depositTermInYears)
-const depositIncome_2 = getDepositIncome(1500, 16, 3)
-const totallIncome = depositIncome_1 + depositIncome_2
-console.log(totallIncome);
+const income = getDepositIncome(depositAmount, yearlyRate, depositTermInYears);
+console.log(count);
