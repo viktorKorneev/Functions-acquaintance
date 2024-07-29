@@ -27,3 +27,9 @@ makeTea(3, "Early Grey", "hey ma!", 42);
 
 // агрументы переданы в неверном порядке
 makeTea("Early Grey", 3)
+
+// функция без параметров
+function barkAtTheMoon() {
+    console.log("Woooooooooooooooooooo!");
+}
+barkAtTheMoon();
