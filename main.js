@@ -38,18 +38,26 @@
 const depositAmount = 1000; // переменная глобальная обл. видимости переменной доступна во всём коде
 const yearlyRate = 15;
 const depositTermInYears = 2;
-let count = 0;  // если функция не обнаружила локальную переменную она использует глобальную
-function getDepositIncome(amount, rate, term) {
-  let depositIncome = 0; // переменная локальная, внутрення обл. видимости доступна только внутрии функции
-
-  while (count < term) {
-    depositIncome = depositIncome + amount * (rate / 100);
-    count = count + 1;
+//let count = 0;  // если функция не обнаружила локальную переменную она использует глобальную
+function wrapper() {
+  function getDepositIncome(amount, rate, term) {
+    // Функция скрыта в локальной области видимости
+    let depositIncome = 0; // переменная локальная, внутрення обл. видимости доступна только внутрии функции
+    let count = 0;
+    while (count < term) {
+      depositIncome = depositIncome + amount * (rate / 100);
+      count = count + 1;
+    }
+    return depositIncome;
   }
-  return depositIncome;
+  const income_1 = getDepositIncome(depositAmount, yearlyRate, depositTermInYears);
+  console.log(income_1);
 }
+
+wrapper() // вызвали функцию
+
 // total
 
-const income_1 = getDepositIncome(depositAmount, yearlyRate, depositTermInYears);
-const income_2 = getDepositIncome(1000, 30, 3);
-console.log(income_2);
+
+
+
