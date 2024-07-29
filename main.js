@@ -26,3 +26,11 @@ if (dogWeight > 20) {
 } else {
     console.log(dogName + " says woof woof");
 }
+
+function bark (name, weight) {
+    if (weight > 20) {
+        console.log(name + " says WOOF WOOF");
+    } else {
+        console.log(name + " says woof woof");
+    }
+}
