@@ -35,13 +35,12 @@
 // barkAtTheMoon();
 
 // deposit
-const depositAmount = 1000;
+const depositAmount = 1000; // переменная глобальная обл. видимости переменной доступна во всём коде
 const yearlyRate = 15;
 const depositTermInYears = 2;
-
+let count = 0;  // если функция не обнаружила локальную переменную она использует глобальную
 function getDepositIncome(amount, rate, term) {
-  let depositIncome = 0;
-  let count = 0;
+  let depositIncome = 0; // переменная локальная, внутрення обл. видимости доступна только внутрии функции
 
   while (count < term) {
     depositIncome = depositIncome + amount * (rate / 100);
@@ -51,5 +50,6 @@ function getDepositIncome(amount, rate, term) {
 }
 // total
 
-const income = getDepositIncome(depositAmount, yearlyRate, depositTermInYears);
-console.log(count);
+const income_1 = getDepositIncome(depositAmount, yearlyRate, depositTermInYears);
+const income_2 = getDepositIncome(1000, 30, 3);
+console.log(income_2);
