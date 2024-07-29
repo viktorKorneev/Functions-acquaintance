@@ -47,6 +47,9 @@ while (count < depositTermInYears) {
     count  = count + 1
 }
 
+function getDepositIncome(amount, rate, term) {
+
+}
 // total
 
 console.log(depositIncome);
